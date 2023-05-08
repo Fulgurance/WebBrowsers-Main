@@ -1,0 +1,274 @@
+{
+  "port": "WebBrowsers-Main",
+  "name": "Firefox",
+  "version": "91.0.1",
+  "architectures": ["x86_64"],
+  "description": "The fast, lightweight, privacy-focused browser",
+  "website": "https://www.mozilla.org/en-GB/firefox",
+  "downloadLinks": ["https://archive.mozilla.org/pub/firefox/releases/91.0.1esr/source/firefox-91.0.1esr.source.tar.xz"],
+  "md5sums": ["f81ca2f266ab3dafdd080f269bbb2286"],
+  "patchesLinks": [ "https://www.linuxfromscratch.org/patches/blfs/11.0/firefox-91.0.1esr-glibc234-1.patch",
+                    "https://www.linuxfromscratch.org/patches/blfs/11.0/firefox-91.0.1esr-disable_rust_test-1.patch"],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Autoconf",
+      "version": "2.13.0",
+      "options": []
+    },
+    {
+      "name": "Cbindgen",
+      "version": "0.20.0",
+      "options": []
+    },
+    {
+      "name": "Dbus-Glib",
+      "version": "0.112.0",
+      "options": []
+    },
+    {
+      "name": "Gtk+",
+      "version": "2.24.33",
+      "options": []
+    },
+    {
+      "name": "Gtk+",
+      "version": "3.24.30",
+      "options": []
+    },
+    {
+      "name": "Libnotify",
+      "version": "0.7.9",
+      "options": []
+    },
+    {
+      "name": "Llvm",
+      "version": "12.0.1",
+      "options": []
+    },
+    {
+      "name": "Nodejs",
+      "version": "14.17.5",
+      "options": []
+    },
+    {
+      "name": "Nss",
+      "version": "3.69.0",
+      "options": []
+    },
+    {
+      "name": "Python",
+      "version": "3.9.6",
+      "options": []
+    },
+    {
+      "name": "Sqlite",
+      "version": "3.36.0",
+      "options": []
+    },
+    {
+      "name": "Startup-Notification",
+      "version": "0.12.0",
+      "options": []
+    },
+    {
+      "name": "Unzip",
+      "version": "6.0.0",
+      "options": []
+    },
+    {
+      "name": "Yasm",
+      "version": "1.3.0",
+      "options": []
+    },
+    {
+      "name": "Zip",
+      "version": "3.0.0",
+      "options": []
+    },
+    {
+      "name": "Icu",
+      "version": "69.1.0",
+      "options": []
+    },
+    {
+      "name": "Libevent",
+      "version": "2.1.12",
+      "options": []
+    },
+    {
+      "name": "Libwebp",
+      "version": "1.2.1",
+      "options": []
+    },
+    {
+      "name": "Nasm",
+      "version": "2.15.5",
+      "options": []
+    }
+  ],
+  "options": [
+    {
+      "name": "Elf-Hack",
+      "description": "Enable elf-hack build option support to improve startup process (can cause failed installs)",
+      "active": false,
+      "dependencies": [],
+      "downloadLinks": [],
+      "md5sums": []
+    },
+    {
+      "name": "Alsa-Lib",
+      "description": "Enable curl support (deprecated, use pulseaudio instead)",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Alsa-Lib",
+          "version": "1.2.5-1",
+          "options": []
+        }
+      ],
+      "downloadLinks": [],
+      "md5sums": []
+    },
+    {
+      "name": "Pulseaudio",
+      "description": "Enable pulseaudio support",
+      "active": true,
+      "dependencies": [
+        {
+          "name": "Pulseaudio",
+          "version": "15.0.0",
+          "options": []
+        }
+      ],
+      "downloadLinks": [],
+      "md5sums": []
+    },
+    {
+      "name": "Curl",
+      "description": "Enable curl support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Curl",
+          "version": "7.78.0",
+          "options": []
+        }
+      ],
+      "downloadLinks": [],
+      "md5sums": []
+    },
+    {
+      "name": "Doxygen",
+      "description": "Enable doxygen support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Doxygen",
+          "version": "1.9.2",
+          "options": []
+        }
+      ],
+      "downloadLinks": [],
+      "md5sums": []
+    },
+    {
+      "name": "Ffmpeg",
+      "description": "Enable ffmpeg support (for mov, mp3 and mp4 support)",
+      "active": true,
+      "dependencies": [
+        {
+          "name": "Ffmpeg",
+          "version": "4.4.0",
+          "options": []
+        }
+      ],
+      "downloadLinks": [],
+      "md5sums": []
+    },
+    {
+      "name": "Liboauth",
+      "description": "Enable liboauth support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Liboauth",
+          "version": "1.0.3",
+          "options": []
+        }
+      ],
+      "downloadLinks": [],
+      "md5sums": []
+    },
+    {
+      "name": "Jdk",
+      "description": "Enable jdk support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Jdk",
+          "version": "16.0.2",
+          "options": []
+        }
+      ],
+      "downloadLinks": [],
+      "md5sums": []
+    },
+    {
+      "name": "Valgrind",
+      "description": "Enable valgrind support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Valgrind",
+          "version": "3.17.0",
+          "options": []
+        }
+      ],
+      "downloadLinks": [],
+      "md5sums": []
+    },
+    {
+      "name": "Wget",
+      "description": "Enable wget support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Wget",
+          "version": "1.21.1",
+          "options": []
+        }
+      ],
+      "downloadLinks": [],
+      "md5sums": []
+    },
+    {
+      "name": "Wireless-Tools",
+      "description": "Enable wireless-tools support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Wireless-Tools",
+          "version": "29.0.0",
+          "options": []
+        }
+      ],
+      "downloadLinks": [],
+      "md5sums": []
+    },
+    {
+      "name": "Liboauth",
+      "description": "Enable liboauth support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Liboauth",
+          "version": "1.0.3",
+          "options": []
+        }
+      ],
+      "downloadLinks": [],
+      "md5sums": []
+    }
+  ]
+}
