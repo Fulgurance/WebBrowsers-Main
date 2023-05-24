@@ -5,9 +5,6 @@
   "architectures": ["x86_64"],
   "description": "The fast, lightweight, privacy-focused browser",
   "website": "https://www.mozilla.org/en-GB/firefox",
-  "downloadLinks": ["https://archive.mozilla.org/pub/firefox/releases/91.0.1esr/source/firefox-91.0.1esr.source.tar.xz"],
-  "md5sums": ["f81ca2f266ab3dafdd080f269bbb2286"],
-  "patchesLinks": [ "https://www.linuxfromscratch.org/patches/blfs/11.0/firefox-91.0.1esr-glibc234-1.patch",
                     "https://www.linuxfromscratch.org/patches/blfs/11.0/firefox-91.0.1esr-disable_rust_test-1.patch"],
   "installedFiles": [],
   "dependencies": [
@@ -113,8 +110,6 @@
       "description": "Enable elf-hack build option support to improve startup process (can cause failed installs)",
       "active": false,
       "dependencies": [],
-      "downloadLinks": [],
-      "md5sums": []
     },
     {
       "name": "Alsa-Lib",
@@ -127,8 +122,6 @@
           "options": []
         }
       ],
-      "downloadLinks": [],
-      "md5sums": []
     },
     {
       "name": "Pulseaudio",
@@ -141,8 +134,6 @@
           "options": []
         }
       ],
-      "downloadLinks": [],
-      "md5sums": []
     },
     {
       "name": "Curl",
@@ -155,8 +146,6 @@
           "options": []
         }
       ],
-      "downloadLinks": [],
-      "md5sums": []
     },
     {
       "name": "Doxygen",
@@ -169,8 +158,6 @@
           "options": []
         }
       ],
-      "downloadLinks": [],
-      "md5sums": []
     },
     {
       "name": "Ffmpeg",
@@ -183,8 +170,6 @@
           "options": []
         }
       ],
-      "downloadLinks": [],
-      "md5sums": []
     },
     {
       "name": "Liboauth",
@@ -197,8 +182,6 @@
           "options": []
         }
       ],
-      "downloadLinks": [],
-      "md5sums": []
     },
     {
       "name": "Jdk",
@@ -211,8 +194,6 @@
           "options": []
         }
       ],
-      "downloadLinks": [],
-      "md5sums": []
     },
     {
       "name": "Valgrind",
@@ -225,8 +206,6 @@
           "options": []
         }
       ],
-      "downloadLinks": [],
-      "md5sums": []
     },
     {
       "name": "Wget",
@@ -239,8 +218,6 @@
           "options": []
         }
       ],
-      "downloadLinks": [],
-      "md5sums": []
     },
     {
       "name": "Wireless-Tools",
@@ -253,8 +230,6 @@
           "options": []
         }
       ],
-      "downloadLinks": [],
-      "md5sums": []
     },
     {
       "name": "Liboauth",
@@ -267,8 +242,6 @@
           "options": []
         }
       ],
-      "downloadLinks": [],
-      "md5sums": []
     }
   ]
 }
