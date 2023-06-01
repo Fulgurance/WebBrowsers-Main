@@ -59,8 +59,8 @@ class Target < ISM::Software
                             buildDirectoryPath,
                             {   "CC" => "gcc",
                                 "MACH_USE_SYSTEM_PYTHON" => "1",
-                                "MOZBUILD_STATE_PATH" => "mozbuild"},
-                                "DESTDIR" => "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}")
+                                "MOZBUILD_STATE_PATH" => "mozbuild",
+                                "DESTDIR" => "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}"})
 
         makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/applications")
 
