@@ -55,12 +55,7 @@
     {
       "name": "Python",
       "version": "3.9.6",
-      "options": []
-    },
-    {
-      "name": "Sqlite",
-      "version": "3.36.0",
-      "options": []
+      "options": ["Sqlite"]
     },
     {
       "name": "Startup-Notification",
