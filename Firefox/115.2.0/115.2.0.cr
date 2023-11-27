@@ -10,6 +10,7 @@ class Target < ISM::Software
         ac_add_options #{option("Elf-Hack") ? "enable-elf-hack" : "disable-elf-hack"}
         ac_add_options --with-system-libevent
         ac_add_options --with-system-webp
+        ac_add_options --with-system-libvpx
         ac_add_options --with-system-nspr
         ac_add_options --with-system-nss
         ac_add_options --with-system-icu
@@ -26,6 +27,7 @@ class Target < ISM::Software
         ac_add_options --with-system-jpeg
         ac_add_options --with-system-png
         ac_add_options --with-system-zlib
+        ac_add_options --without-wasm-sandboxed-libraries
         unset MOZ_TELEMETRY_REPORTING
         mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/firefox-build-dir
         CODE
@@ -37,8 +39,7 @@ class Target < ISM::Software
 
         runPythonCommand(   ["./mach","configure"],
                             buildDirectoryPath,
-                            {   "CC" => "gcc",
-                                "MACH_USE_SYSTEM_PYTHON" => "1",
+                            {   "MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE" => "none",
                                 "MOZBUILD_STATE_PATH" => "mozbuild"})
     end
 
@@ -47,8 +48,7 @@ class Target < ISM::Software
 
         runPythonCommand(   ["./mach","build"],
                             buildDirectoryPath,
-                            {   "CC" => "gcc",
-                                "MACH_USE_SYSTEM_PYTHON" => "1",
+                            {   "MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE" => "none",
                                 "MOZBUILD_STATE_PATH" => "mozbuild"})
     end
     
@@ -57,8 +57,7 @@ class Target < ISM::Software
 
         runPythonCommand(   ["./mach","install"],
                             buildDirectoryPath,
-                            {   "CC" => "gcc",
-                                "MACH_USE_SYSTEM_PYTHON" => "1",
+                            {   "MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE" => "none",
                                 "MOZBUILD_STATE_PATH" => "mozbuild",
                                 "DESTDIR" => "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}"})
 
