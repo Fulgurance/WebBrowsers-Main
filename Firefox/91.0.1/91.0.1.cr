@@ -79,12 +79,8 @@ class Target < ISM::Software
         StartupNotify=true
         CODE
         fileWriteData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/applications/firefox.desktop",firefoxData)
-    end
 
-    def install
-        super
-
-        makeLink("#{Ism.settings.rootPath}usr/lib/firefox/browser/chrome/icons/default/default128.png","#{Ism.settings.rootPath}usr/share/pixmaps/firefox.png",:symbolicLinkByOverwrite)
+        makeLink("/usr/lib/firefox/browser/chrome/icons/default/default128.png","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/pixmaps/firefox.png",:symbolicLinkByOverwrite)
     end
 
 end
