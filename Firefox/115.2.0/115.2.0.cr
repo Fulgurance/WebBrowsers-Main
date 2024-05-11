@@ -79,6 +79,8 @@ class Target < ISM::Software
         CODE
         fileWriteData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/applications/firefox.desktop",firefoxData)
 
+        makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/pixmaps")
+
         makeLink("/usr/lib/firefox/browser/chrome/icons/default/default128.png","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/pixmaps/firefox.png",:symbolicLinkByOverwrite)
     end
 
