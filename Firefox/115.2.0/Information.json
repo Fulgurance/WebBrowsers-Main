@@ -26,7 +26,7 @@
       "options": []
     },
     {
-      "port": "BaseLibraries-Main",
+      "port": "GraphicsLibraries-Main",
       "name": "Libnotify",
       "version": ">=0.8.2",
       "options": []
