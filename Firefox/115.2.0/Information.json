@@ -86,7 +86,7 @@
       "options": []
     },
     {
-      "port": "BaseLibraries-Main",
+      "port": "NetworkingLibraries-Main",
       "name": "Libevent",
       "version": ">=2.1.12",
       "options": []
