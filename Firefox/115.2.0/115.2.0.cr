@@ -31,7 +31,7 @@ class Target < ISM::Software
         unset MOZ_TELEMETRY_REPORTING
         mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/firefox-build-dir
         CODE
-        fileWriteData("#{buildDirectoryPath(false)}/mozconfig",mozconfigData)
+        fileWriteData("#{buildDirectoryPath}/mozconfig",mozconfigData)
     end
     
     def configure
@@ -61,7 +61,7 @@ class Target < ISM::Software
                                 "MOZBUILD_STATE_PATH" => "mozbuild",
                                 "DESTDIR" => "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}"})
 
-        makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/applications")
+        makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/applications")
 
         firefoxData = <<-CODE
         [Desktop Entry]
@@ -77,11 +77,11 @@ class Target < ISM::Software
         MimeType=text/xml;text/mml;text/html;application/xhtml+xml;application/vnd.mozilla.xul+xml;x-scheme-handler/http;x-scheme-handler/https;
         StartupNotify=true
         CODE
-        fileWriteData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/applications/firefox.desktop",firefoxData)
+        fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/applications/firefox.desktop",firefoxData)
 
-        makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/pixmaps")
+        makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/pixmaps")
 
-        makeLink("/usr/lib/firefox/browser/chrome/icons/default/default128.png","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/pixmaps/firefox.png",:symbolicLinkByOverwrite)
+        makeLink("/usr/lib/firefox/browser/chrome/icons/default/default128.png","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/pixmaps/firefox.png",:symbolicLinkByOverwrite)
     end
 
 end
