@@ -37,29 +37,29 @@ class Target < ISM::Software
     def configure
         super
 
-        runPythonCommand(   ["./mach","configure"],
-                            buildDirectoryPath,
-                            {   "MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE" => "none",
-                                "MOZBUILD_STATE_PATH" => "mozbuild"})
+        runPythonCommand(   arguments:      "./mach configure",
+                            path:           buildDirectoryPath,
+                            environment:    {   "MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE" => "none",
+                                                "MOZBUILD_STATE_PATH" => "mozbuild"})
     end
 
     def build
         super
 
-        runPythonCommand(   ["./mach","build"],
-                            buildDirectoryPath,
-                            {   "MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE" => "none",
-                                "MOZBUILD_STATE_PATH" => "mozbuild"})
+        runPythonCommand(   arguments:      "./mach build",
+                            path:           buildDirectoryPath,
+                            environment:    {   "MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE" => "none",
+                                                "MOZBUILD_STATE_PATH" => "mozbuild"})
     end
     
     def prepareInstallation
         super
 
-        runPythonCommand(   ["./mach","install"],
-                            buildDirectoryPath,
-                            {   "MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE" => "none",
-                                "MOZBUILD_STATE_PATH" => "mozbuild",
-                                "DESTDIR" => "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}"})
+        runPythonCommand(   arguments:      "./mach","install",
+                            path:           buildDirectoryPath,
+                            environment:    {   "MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE" => "none",
+                                                "MOZBUILD_STATE_PATH" => "mozbuild",
+                                                "DESTDIR" => "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}"})
 
         makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/applications")
 
@@ -81,7 +81,9 @@ class Target < ISM::Software
 
         makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/pixmaps")
 
-        makeLink("/usr/lib/firefox/browser/chrome/icons/default/default128.png","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/pixmaps/firefox.png",:symbolicLinkByOverwrite)
+        makeLink(   target: "/usr/lib/firefox/browser/chrome/icons/default/default128.png",
+                    path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/pixmaps/firefox.png",
+                    type:   :symbolicLinkByOverwrite)
     end
 
 end
