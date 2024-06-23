@@ -55,7 +55,7 @@ class Target < ISM::Software
     def prepareInstallation
         super
 
-        runPythonCommand(   arguments:      "./mach","install",
+        runPythonCommand(   arguments:      "./mach install",
                             path:           buildDirectoryPath,
                             environment:    {   "MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE" => "none",
                                                 "MOZBUILD_STATE_PATH" => "mozbuild",
