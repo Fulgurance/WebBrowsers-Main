@@ -5,8 +5,8 @@ class Target < ISM::Software
 
         mozconfigData = <<-CODE
         ac_add_options #{option("Wireless-Tools") ? "--enable-necko-wifi" : "--disable-necko-wifi"}
-        ac_add_options #{option("Pulseaudio") ? "--enable-pulseaudio" : "--disable-pulseaudio"}
-        ac_add_options #{option("Alsa-Lib") ? "--enable-alsa" : "--disable-alsa"}
+        ac_add_options --enable-pulseaudio
+        ac_add_options --disable-alsa
         ac_add_options #{option("Elf-Hack") ? "--enable-elf-hack" : "--disable-elf-hack"}
         ac_add_options --with-system-libevent
         ac_add_options --with-system-webp

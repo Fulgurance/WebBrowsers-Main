@@ -44,6 +44,12 @@
       "options": []
     },
     {
+          "port": "MultimediaSoftwares-Main",
+          "name": "Pulseaudio",
+          "version": ">=16.1.0",
+          "options": []
+    },
+    {
       "port": "SecurityLibraries-Main",
       "name": "Nss",
       "version": ">=3.92.0",
@@ -117,34 +123,6 @@
       "description": "Enable elf-hack build option support to improve startup process (can cause failed installs)",
       "active": false,
       "dependencies": [],
-      "kernelDependencies": []
-    },
-    {
-      "name": "Alsa-Lib",
-      "description": "Enable curl support (deprecated, use pulseaudio instead)",
-      "active": false,
-      "dependencies": [
-        {
-          "port": "MultimediaLibraries-Main",
-          "name": "Alsa-Lib",
-          "version": ">=1.2.9",
-          "options": []
-        }
-      ],
-      "kernelDependencies": []
-    },
-    {
-      "name": "Pulseaudio",
-      "description": "Enable pulseaudio support",
-      "active": true,
-      "dependencies": [
-        {
-          "port": "MultimediaSoftwares-Main",
-          "name": "Pulseaudio",
-          "version": ">=16.1.0",
-          "options": []
-        }
-      ],
       "kernelDependencies": []
     },
     {
