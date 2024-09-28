@@ -37,7 +37,7 @@ class Target < ISM::Software
     def configure
         super
 
-        runPythonCommand(   arguments:      "./mach configure",
+        runPythonCommand(   arguments:      "./mach configure --host=#{Ism.settings.systemTarget}",
                             path:           buildDirectoryPath,
                             environment:    {   "MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE" => "none",
                                                 "MOZBUILD_STATE_PATH" => "mozbuild"})
