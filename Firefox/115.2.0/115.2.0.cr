@@ -5,7 +5,7 @@ class Target < ISM::Software
 
         mozconfigData = <<-CODE
         ac_add_options --target=#{Ism.settings.systemTarget}
-        ac_add_options --host=#{Ism.settings.systemTarget}
+        ac_add_options --host=x86_64-unknown-linux-gnu
         ac_add_options --enable-bootstrap
         ac_add_options #{option("Wireless-Tools") ? "--enable-necko-wifi" : "--disable-necko-wifi"}
         ac_add_options --enable-pulseaudio
