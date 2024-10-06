@@ -43,7 +43,7 @@ class Target < ISM::Software
         runPythonCommand(   arguments:      "./mach configure",
                             path:           buildDirectoryPath,
                             environment:    {   "MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE" => "none",
-                                                "MOZBUILD_STATE_PATH" => "mozbuild"},
+                                                "MOZBUILD_STATE_PATH" => "mozbuild",
                                                 "RUST_TARGET" => "#{Ism.settings.systemTarget}")
     end
 
@@ -53,7 +53,7 @@ class Target < ISM::Software
         runPythonCommand(   arguments:      "./mach build",
                             path:           buildDirectoryPath,
                             environment:    {   "MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE" => "none",
-                                                "MOZBUILD_STATE_PATH" => "mozbuild"},
+                                                "MOZBUILD_STATE_PATH" => "mozbuild",
                                                 "RUST_TARGET" => "#{Ism.settings.systemTarget}")
     end
     
@@ -64,7 +64,7 @@ class Target < ISM::Software
                             path:           buildDirectoryPath,
                             environment:    {   "MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE" => "none",
                                                 "MOZBUILD_STATE_PATH" => "mozbuild",
-                                                "DESTDIR" => "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}"},
+                                                "DESTDIR" => "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}",
                                                 "RUST_TARGET" => "#{Ism.settings.systemTarget}")
 
         makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/applications")
