@@ -14,6 +14,12 @@
       "options": []
     },
     {
+      "port": "ProgrammingTools-Main",
+      "name": "Xargo",
+      "version": ">=0.3.20",
+      "options": []
+    },
+    {
       "port": "BaseLibraries-Main",
       "name": "Dbus-Glib",
       "version": ">=0.112.0",
