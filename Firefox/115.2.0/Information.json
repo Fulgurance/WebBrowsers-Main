@@ -14,9 +14,9 @@
       "options": []
     },
     {
-      "port": "ProgrammingTools-Main",
-      "name": "Xargo",
-      "version": ">=0.3.20",
+      "port": "ProgrammingLanguages-Main",
+      "name": "Rust",
+      "version": ">=1.71.1",
       "options": []
     },
     {
