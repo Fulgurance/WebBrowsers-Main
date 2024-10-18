@@ -1,0 +1,251 @@
+{
+  "port": "WebBrowsers-Main",
+  "name": "Firefox",
+  "version": "131.0.3",
+  "architectures": ["x86_64"],
+  "description": "The fast, lightweight, privacy-focused browser",
+  "website": "https://www.mozilla.org/en-GB/firefox",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "port": "ProgrammingTools-Main",
+      "name": "Cbindgen",
+      "version": ">=0.24.3",
+      "options": []
+    },
+    {
+      "port": "ProgrammingLanguages-Main",
+      "name": "Rust",
+      "version": ">=1.71.1",
+      "options": []
+    },
+    {
+      "port": "BaseLibraries-Main",
+      "name": "Dbus-Glib",
+      "version": ">=0.112.0",
+      "options": []
+    },
+    {
+      "port": "GraphicsLibraries-Main",
+      "name": "Gtk+",
+      "version": ">=3.24.38",
+      "options": []
+    },
+    {
+      "port": "GraphicsLibraries-Main",
+      "name": "Libnotify",
+      "version": ">=0.8.2",
+      "options": []
+    },
+    {
+      "port": "ProgrammingLanguages-Main",
+      "name": "Llvm",
+      "version": ">=16.0.5",
+      "options": ["Clang"]
+    },
+    {
+      "port": "ProgrammingTools-Main",
+      "name": "Nodejs",
+      "version": ">=18.17.1",
+      "options": []
+    },
+    {
+          "port": "MultimediaSoftwares-Main",
+          "name": "Pulseaudio",
+          "version": ">=16.1.0",
+          "options": []
+    },
+    {
+      "port": "SecurityLibraries-Main",
+      "name": "Nss",
+      "version": ">=3.92.0",
+      "options": []
+    },
+    {
+      "port": "ProgrammingLanguages-Main",
+      "name": "Python",
+      "version": ">=3.11.4",
+      "options": ["Sqlite"]
+    },
+    {
+      "port": "GraphicsLibraries-Main",
+      "name": "Startup-Notification",
+      "version": ">=0.12.0",
+      "options": []
+    },
+    {
+      "port": "Archivers-Main",
+      "name": "Unzip",
+      "version": ">=6.0.0",
+      "options": []
+    },
+    {
+      "port": "ProgrammingTools-Main",
+      "name": "Yasm",
+      "version": ">=1.3.0",
+      "options": []
+    },
+    {
+      "port": "Archivers-Main",
+      "name": "Zip",
+      "version": ">=3.0.0",
+      "options": []
+    },
+    {
+      "port": "BaseLibraries-Main",
+      "name": "Icu",
+      "version": ">=73.2.0",
+      "options": []
+    },
+    {
+      "port": "NetworkingLibraries-Main",
+      "name": "Libevent",
+      "version": ">=2.1.12",
+      "options": []
+    },
+    {
+      "port": "MultimediaLibraries-Main",
+      "name": "Libvpx",
+      "version": ">=1.13.0",
+      "options": []
+    },
+    {
+      "port": "NetworkingLibraries-Main",
+      "name": "Libwebp",
+      "version": ">=1.3.1",
+      "options": []
+    },
+    {
+      "port": "ProgrammingTools-Main",
+      "name": "Nasm",
+      "version": ">=2.16.1",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [
+    {
+      "name": "Elf-Hack",
+      "description": "Enable elf-hack build option support to improve startup process (can cause failed installs)",
+      "active": false,
+      "dependencies": [],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Curl",
+      "description": "Enable curl support",
+      "active": false,
+      "dependencies": [
+        {
+          "port": "NetworkingLibraries-Main",
+          "name": "Curl",
+          "version": ">=8.2.1",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Doxygen",
+      "description": "Enable doxygen support",
+      "active": false,
+      "dependencies": [
+        {
+          "port": "Utilities-Main",
+          "name": "Doxygen",
+          "version": ">=1.9.7",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Ffmpeg",
+      "description": "Enable ffmpeg support (for mov, mp3 and mp4 support)",
+      "active": true,
+      "dependencies": [
+        {
+          "port": "MultimediaSoftwares-Main",
+          "name": "Ffmpeg",
+          "version": ">=6.0.0",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Liboauth",
+      "description": "Enable liboauth support",
+      "active": false,
+      "dependencies": [
+        {
+          "port": "BaseLibraries-Main",
+          "name": "Liboauth",
+          "version": ">=1.0.3",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Pciutils",
+      "description": "Enable pciutils support",
+      "active": false,
+      "dependencies": [
+        {
+          "port": "Utilities-Main",
+          "name": "Pciutils",
+          "version": ">=3.10.0",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Valgrind",
+      "description": "Enable valgrind support",
+      "active": false,
+      "dependencies": [
+        {
+          "port": "Utilities-Main",
+          "name": "Valgrind",
+          "version": ">=3.21.0",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Wget",
+      "description": "Enable wget support",
+      "active": false,
+      "dependencies": [
+        {
+          "port": "NetworkingSoftwares-Main",
+          "name": "Wget",
+          "version": ">=1.21.4",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Wireless-Tools",
+      "description": "Enable wireless-tools support",
+      "active": false,
+      "dependencies": [
+        {
+          "port": "NetworkingTools-Main",
+          "name": "Wireless-Tools",
+          "version": ">=29.0.0",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    }
+  ],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}
