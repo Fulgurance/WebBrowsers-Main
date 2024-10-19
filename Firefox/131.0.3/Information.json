@@ -16,7 +16,7 @@
     {
       "port": "ProgrammingLanguages-Main",
       "name": "Rust",
-      "version": ">=1.71.1",
+      "version": ">=1.76.0",
       "options": []
     },
     {
