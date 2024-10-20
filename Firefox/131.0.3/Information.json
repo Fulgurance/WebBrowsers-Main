@@ -10,7 +10,7 @@
     {
       "port": "ProgrammingTools-Main",
       "name": "Cbindgen",
-      "version": ">=0.24.3",
+      "version": ">=0.26.0",
       "options": []
     },
     {
