@@ -41,14 +41,16 @@ class Target < ISM::Software
         super
 
         runPythonCommand(   arguments:      "./mach configure",
-                            path:           buildDirectoryPath)
+                            path:           buildDirectoryPath,
+                            environment:    {"PATH" => "/usr/lib/llvm/#{dependencyMajorVersion("@ProgrammingLanguages-Main:Llvm")}/bin:$PATH"})
     end
 
     def build
         super
 
         runPythonCommand(   arguments:      "./mach build",
-                            path:           buildDirectoryPath)
+                            path:           buildDirectoryPath,
+                            environment:    {"PATH" => "/usr/lib/llvm/#{dependencyMajorVersion("@ProgrammingLanguages-Main:Llvm")}/bin:$PATH"})
     end
     
     def prepareInstallation
