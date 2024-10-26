@@ -42,7 +42,7 @@ class Target < ISM::Software
 
         runPythonCommand(   arguments:      "./mach configure",
                             path:           buildDirectoryPath,
-                            environment:    {"PATH" => "/usr/lib/llvm/#{dependencyMajorVersion("@ProgrammingLanguages-Main:Llvm")}/bin:$PATH"})
+                            environment:    {"PATH" => "/usr/lib/llvm/#{softwareMajorVersion("@ProgrammingLanguages-Main:Llvm")}/bin:$PATH"})
     end
 
     def build
