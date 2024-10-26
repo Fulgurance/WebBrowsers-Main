@@ -42,7 +42,8 @@ class Target < ISM::Software
 
         runPythonCommand(   arguments:      "./mach configure",
                             path:           buildDirectoryPath,
-                            environment:    {   "MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE" => "none",
+                            environment:    {   "PATH" => "/usr/lib/llvm/#{softwareMajorVersion("@ProgrammingLanguages-Main:Llvm")}/bin:$PATH",
+                                                "MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE" => "none",
                                                 "MOZBUILD_STATE_PATH" => "mozbuild"})
     end
 
