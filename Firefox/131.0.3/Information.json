@@ -64,7 +64,7 @@
     {
       "port": "ProgrammingLanguages-Main",
       "name": "Python",
-      "version": ">=3.11.4",
+      "version": "<3.13.0",
       "options": ["Sqlite"]
     },
     {

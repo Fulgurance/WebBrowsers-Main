@@ -1,7 +1,7 @@
 {
   "port": "WebBrowsers-Main",
   "name": "Firefox",
-  "version": "115.2.0",
+  "version": "128.4.0",
   "architectures": ["x86_64"],
   "description": "The fast, lightweight, privacy-focused browser",
   "website": "https://www.mozilla.org/en-GB/firefox",
@@ -10,13 +10,13 @@
     {
       "port": "ProgrammingTools-Main",
       "name": "Cbindgen",
-      "version": ">=0.24.3",
+      "version": ">=0.26.0",
       "options": []
     },
     {
       "port": "ProgrammingLanguages-Main",
       "name": "Rust",
-      "version": ">=1.71.1",
+      "version": ">=1.76.0",
       "options": []
     },
     {
@@ -58,13 +58,13 @@
     {
       "port": "SecurityLibraries-Main",
       "name": "Nss",
-      "version": ">=3.92.0",
+      "version": ">=3.104.0",
       "options": []
     },
     {
       "port": "ProgrammingLanguages-Main",
       "name": "Python",
-      "version": ">=3.11.4",
+      "version": "<3.13.0",
       "options": ["Sqlite"]
     },
     {
