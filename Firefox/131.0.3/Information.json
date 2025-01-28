@@ -235,7 +235,7 @@
       "active": false,
       "dependencies": [
         {
-          "port": "NetworkingTools-Main",
+          "port": "NetworkingSoftwares-Main",
           "name": "Wireless-Tools",
           "version": ">=29.0.0",
           "options": []
