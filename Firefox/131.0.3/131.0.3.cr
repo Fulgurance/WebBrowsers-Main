@@ -50,7 +50,9 @@ class Target < ISM::Software
         super
 
         runPythonCommand(   arguments:      "./mach build",
-                            path:           buildDirectoryPath)
+                            path:           buildDirectoryPath,
+                            environment:    {   "PATH" => "/usr/bin/python3.12:/usr/lib/llvm/#{softwareMajorVersion("@ProgrammingLanguages-Main:Llvm")}/bin:$PATH",
+                                                "PYTHONPATH" => "/usr/lib/python3.12/site-packages"})
     end
     
     def prepareInstallation
@@ -58,7 +60,9 @@ class Target < ISM::Software
 
         runPythonCommand(   arguments:      "./mach install",
                             path:           buildDirectoryPath,
-                            environment:    {"DESTDIR" => "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}"})
+                            environment:    {   "DESTDIR" => "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}",
+                                                "PATH" => "/usr/bin/python3.12:/usr/lib/llvm/#{softwareMajorVersion("@ProgrammingLanguages-Main:Llvm")}/bin:$PATH",
+                                                "PYTHONPATH" => "/usr/lib/python3.12/site-packages"})
 
         makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/applications")
 
