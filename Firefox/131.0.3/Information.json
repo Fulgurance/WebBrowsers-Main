@@ -50,10 +50,10 @@
       "options": []
     },
     {
-          "port": "MultimediaSoftwares-Main",
-          "name": "Pulseaudio",
-          "version": ">=16.1.0",
-          "options": []
+      "port": "MultimediaSoftwares-Main",
+      "name": "Pulseaudio",
+      "version": ">=16.1.0",
+      "options": []
     },
     {
       "port": "SecurityLibraries-Main",
