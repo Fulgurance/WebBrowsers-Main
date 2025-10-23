@@ -1,0 +1,26 @@
+PORT
+    WebBrowsers-Main
+NAME
+    Links
+VERSION
+    2.29.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Fast and lightweight web browser running in both graphics and text mode
+WEBSITE
+     http://links.twibright.com
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+    name: Libevent
+    description: Enable libevent support
+    active: false
+    dependencies:
+        @NetworkingLibraries-Main:Libevent>=2.1.12
+    kernelDependencies:
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

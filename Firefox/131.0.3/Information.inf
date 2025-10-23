@@ -1,0 +1,99 @@
+PORT
+    WebBrowsers-Main
+NAME
+    Firefox
+VERSION
+    131.0.3
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    The fast, lightweight, privacy-focused browser
+WEBSITE
+    https://www.mozilla.org/en-GB/firefox
+DEPENDENCIES
+        @ProgrammingTools-Main:Cbindgen>=0.26.0
+        @ProgrammingLanguages-Main:Rust>=1.76.0
+        @BaseLibraries-Main:Dbus-Glib>=0.112.0
+        @GraphicsLibraries-Main:Gtk>=3.24.38
+        @GraphicsLibraries-Main:Libnotify>=0.8.2
+        @ProgrammingLanguages-Main:Llvm>=16.0.5(Clang)
+        @ProgrammingTools-Main:Nodejs>=18.17.1
+        @MultimediaSoftwares-Main:Pulseaudio>=16.1.0
+        @SecurityLibraries-Main:Nss>=3.104.0
+        @ProgrammingLanguages-Main:Python>=3.12.0 ~ <3.13.0(Sqlite)
+        @GraphicsLibraries-Main:Startup-Notification>=0.12.0
+        @Archivers-Main:Unzip>=6.0.0
+        @ProgrammingTools-Main:Yasm>=1.3.0
+        @Archivers-Main:Zip>=3.0.0
+        @BaseLibraries-Main:Icu>=73.2.0
+        @NetworkingLibraries-Main:Libevent>=2.1.12
+        @MultimediaLibraries-Main:Libvpx>=1.13.0
+        @NetworkingLibraries-Main:Libwebp>=1.3.1
+        @ProgrammingTools-Main:Nasm>=2.16.1
+KERNELDEPENDENCIES
+OPTIONS
+    name: Elf-Hack
+    description: Enable elf-hack build option support to improve startup process (can cause failed installs)
+    active: false
+    dependencies:
+    kernelDependencies:
+
+    name: Curl
+    description: Enable curl support
+    active: false
+    dependencies:
+        @NetworkingLibraries-Main:Curl>=8.2.1
+    kernelDependencies:
+
+    name: Doxygen
+    description: Enable doxygen support
+    active: false
+    dependencies:
+        @Utilities-Main:Doxygen>=1.9.7
+    kernelDependencies:
+
+    name: Ffmpeg
+    description: Enable ffmpeg support (for mov, mp3 and mp4 support)
+    active: true
+    dependencies:
+        @MultimediaSoftwares-Main:Ffmpeg>=6.0.0
+    kernelDependencies:
+
+    name: Liboauth
+    description: Enable liboauth support
+    active: false
+    dependencies:
+        @BaseLibraries-Main:Liboauth>=1.0.3
+    kernelDependencies:
+
+    name: Pciutils
+    description: Enable pciutils support
+    active: false
+    dependencies:
+        @Utilities-Main:Pciutils>=3.10.0
+    kernelDependencies:
+
+    name: Valgrind
+    description: Enable valgrind support
+    active: false
+    dependencies:
+        @Utilities-Main:Valgrind>=3.21.0
+    kernelDependencies:
+
+    name: Wget
+    description: Enable wget support
+    active: false
+    dependencies:
+        @NetworkingSoftwares-Main:Wget>=1.21.4
+    kernelDependencies:
+
+    name: Wireless-Tools
+    description: Enable wireless-tools support
+    active: false
+    dependencies:
+        @NetworkingSoftwares-Main:Wireless-Tools>=29.0.0
+    kernelDependencies:
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES
