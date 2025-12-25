@@ -13,7 +13,6 @@ WEBSITE
 DEPENDENCIES
         @ProgrammingTools-Main:Cbindgen>=0.26.0
         @ProgrammingLanguages-Main:Rust>=1.76.0
-        @BaseLibraries-Main:Dbus-Glib>=0.112.0
         @GraphicsLibraries-Main:Gtk>=3.24.38
         @GraphicsLibraries-Main:Libnotify>=0.8.2
         @ProgrammingLanguages-Main:Llvm>=16.0.5(Clang)
